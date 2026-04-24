@@ -1,3 +1,125 @@
+.auth-shell {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+  background:
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.1), transparent 35%),
+    linear-gradient(180deg, #090b12 0%, #000 100%);
+}
+
+.auth-card {
+  width: min(32rem, 100%);
+  display: grid;
+  gap: 1rem;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+
+  h1,
+  p {
+    margin: 0;
+  }
+
+  p {
+    color: $text-secondary;
+    line-height: 1.6;
+  }
+}
+
+.github-login-button,
+.logout-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 999px;
+  padding: 0.9rem 1.15rem;
+  background: rgba(255, 255, 255, 0.06);
+  color: $text-principal;
+  cursor: pointer;
+}
+
+.page-title-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+
+  h2 {
+    margin: 0;
+    font-size: 1.75rem;
+  }
+
+  &__actions {
+    display: flex;
+    gap: 0.75rem;
+
+    button {
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 999px;
+      padding: 0.7rem 1rem;
+      background: transparent;
+      color: $text-principal;
+      cursor: pointer;
+    }
+  }
+}
+
+.content-card,
+.text-modal-preview {
+  display: grid;
+  gap: 0.85rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.content-card {
+  &__image {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    border-radius: 0.9rem;
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  &__meta {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.75rem;
+    color: $text-secondary;
+    font-size: 0.85rem;
+  }
+
+  h3,
+  p {
+    margin: 0;
+  }
+
+  p {
+    color: $text-secondary;
+  }
+}
+
+.text-modal-preview {
+  h3,
+  p,
+  div,
+  small {
+    margin: 0;
+  }
+
+  p,
+  small {
+    color: $text-secondary;
+  }
+}
+
 .admin-shell {
   min-height: 100vh;
   display: grid;
@@ -47,6 +169,50 @@
       color: $text-principal;
       background: rgba(255, 255, 255, 0.08);
     }
+  }
+
+  &__session {
+    display: grid;
+    gap: 0.9rem;
+    margin-top: auto;
+    padding-top: 2rem;
+  }
+}
+
+.session-card {
+  display: grid;
+  grid-template-columns: 3rem 1fr;
+  gap: 0.85rem;
+  align-items: center;
+  padding: 0.9rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  img,
+  &__avatar {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+  }
+
+  &__avatar {
+    display: grid;
+    place-items: center;
+    background: rgba(255, 255, 255, 0.08);
+    color: $text-principal;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  strong,
+  span {
+    display: block;
+  }
+
+  span {
+    color: $text-secondary;
+    margin-top: 0.25rem;
   }
 }
 
